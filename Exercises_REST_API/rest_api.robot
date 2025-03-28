@@ -19,7 +19,7 @@ ${BASE_URL}                     http://216.10.245.166
 
 Verify Book details
     [Documentation]             Verify Book details using Open Library REST API (https://openlibrary.org/dev/docs/api/books)
-    [tags]                      GET
+    [tags]                      API    GET_API    GET
     # Create a session using Create Session
     ${var}=                     Create Session              openbookslib                http://openlibrary.org/api
 
@@ -49,7 +49,7 @@ Verify Book details
 
 
 Add Book into Library Database With json response
-    [Tags]    API    API_POST
+    [Tags]    API    API_POST    POST
     #Change the aisle value in every execution: successfully added, Book Already Exists ****
     Create Session    Addbook    ${BASE_URL}    verify=true
     &{req_body}    Create Dictionary    name=RobotFramework    isbn=MEX    aisle=2062211    author=Antonio
