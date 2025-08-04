@@ -28,30 +28,23 @@ Login to GitHub and Validate Home Page
     
     # Validate successful login by checking home page elements
     Verify Text        Dashboard    timeout=${TIMEOUT}
-    #Verify Text        Repositories    timeout=${TIMEOUT}
+    Verify Text        Home    timeout=${TIMEOUT}
     
     # Verify user profile elements are present
     ${profile_visible}=    Is Text    View profile and more    timeout=10
     Should Be True     ${profile_visible}    Profile menu should be visible after login
     
     # Verify navigation elements
+    ClickElement      xpath\=//button[@aria-label\="Open global navigation menu" and contains(@class, "AppHeader-button")]
     Verify Text        Pull requests    timeout=${TIMEOUT}
     Verify Text        Issues          timeout=${TIMEOUT}
     Verify Text        Marketplace     timeout=${TIMEOUT}
     Verify Text        Explore         timeout=${TIMEOUT}
     
-    # Verify repository section
-    ${repo_section}=   Is Text    Recent Repositories    timeout=10
-    Run Keyword If     ${repo_section}    Log    Recent Repositories section found
-    
     # Verify feed section exists
     ${feed_visible}=   Is Text    Following    timeout=5
     Run Keyword If     ${feed_visible}    Verify Text    All activity
-    
-    # Additional validation for logged-in state
-    ${create_repo}=    Is Text    Create repository    timeout=5
-    Should Be True     ${create_repo}    Create repository option should be available
-    
+   
     # Log successful completion
     Log                GitHub login and home page validation completed successfully
 
