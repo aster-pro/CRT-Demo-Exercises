@@ -25,14 +25,17 @@ Login To GitHub And Validate User Page
     
     # Submit login form
     ClickText          Sign in
+
+    # Auth
+    TypeText           Device Verification Code     696289
+        
     
     # Validate successful login by checking user page elements
     VerifyText         Dashboard
-    VerifyText         Repositories
-    VerifyText         Pull requests
-    VerifyText         Issues
-    VerifyText         Marketplace
-    VerifyText         Explore
+    VerifyText         Top repositories
+    VerifyText         Summarize a pull request
+    VerifyText         Suggest next steps for an issue
+    VerifyText         Make a Pong game
     
     # Navigate to user profile
     ClickText          ${USERNAME}
@@ -45,7 +48,7 @@ Login To GitHub And Validate User Page
     # Verify user profile information
     VerifyText         ${USERNAME}
     VerifyText         Edit profile
-    VerifyText         Follow
+    VerifyText         Show more activity
     
     # Validate profile sections are present
     ${profile_exists}=    IsText    Popular repositories    timeout=5
