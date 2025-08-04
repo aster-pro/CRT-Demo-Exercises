@@ -25,18 +25,16 @@ Login To GitHub And Validate User Page
     
     # Submit login form
     ClickText          Sign in                      
-
-    # Auth
-    TypeText           Device Verification Code     029547
-        
     
     # Validate successful login by checking user page elements
     VerifyText         Dashboard
     VerifyText         Top repositories
 
+    # Using aria-label (good for accessibility)
+    ClickElement    xpath=//button[@aria-label='Open user navigation menu']
+
     
     # Navigate to user profile
-    ClickText          ${USERNAME}
     VerifyText         Overview
     VerifyText         Repositories
     VerifyText         Projects
@@ -58,5 +56,6 @@ Login To GitHub And Validate User Page
     IF                         ${contributions_exist}
         VerifyText             Contribution activity
     END
+    
     
    
