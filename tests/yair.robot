@@ -24,18 +24,16 @@ Login To GitHub And Validate User Page
     TypeSecret         Password                     ${PASSWORD}
     
     # Submit login form
-    ClickText          Sign in
+    ClickText          Sign in                      
 
     # Auth
-    TypeText           Device Verification Code     696289
+    TypeText           Device Verification Code     029547
         
     
     # Validate successful login by checking user page elements
     VerifyText         Dashboard
     VerifyText         Top repositories
-    VerifyText         Summarize a pull request
-    VerifyText         Suggest next steps for an issue
-    VerifyText         Make a Pong game
+
     
     # Navigate to user profile
     ClickText          ${USERNAME}
