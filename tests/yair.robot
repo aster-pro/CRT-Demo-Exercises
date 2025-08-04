@@ -1,5 +1,6 @@
 *** Settings ***
 Library                QWeb
+Suite Setup        OpenBrowser    about:blank    chrome
 
 *** Variables ***
 ${GITHUB_URL}         https://github.com/login
