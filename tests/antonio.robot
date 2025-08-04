@@ -1,5 +1,8 @@
 *** Settings ***
 Library    QWeb
+Suite Setup            Open Browser                about:blank           chrome
+Suite Teardown         Close All Browsers
+
 
 *** Variables ***
 ${GITHUB_URL}         https://github.com/login
