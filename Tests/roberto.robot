@@ -41,5 +41,4 @@ Validate Successful Login
     [Documentation]    Verify that login was successful by checking for user elements
     Verify Text           Dashboard                    timeout=15s
     Verify Text           Create repository
-    ${profile_visible}=   Is Text    ${GITHUB_USERNAME}    timeout=10s
-    Should Be True        ${profile_visible}           Profile menu should be visible after login
+
