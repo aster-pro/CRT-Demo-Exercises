@@ -3,8 +3,8 @@ Library                QWeb
 
 *** Variables ***
 ${GITHUB_URL}          https://github.com/login
-${USERNAME}            your_username
-${PASSWORD}            your_password
+${USERNAME}            
+${PASSWORD}            
 ${TIMEOUT}             20
 
 *** Test Cases ***
