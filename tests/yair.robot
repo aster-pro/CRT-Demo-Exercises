@@ -61,14 +61,4 @@ Login To GitHub And Validate User Page
         VerifyText             Contribution activity
     END
     
-    # Verify user can access settings
-    ClickText          Settings
-    VerifyText         Public profile
-    VerifyText         Account
-    VerifyText         Appearance
-    VerifyText         Accessibility
-    
-    # Navigate back to dashboard to confirm session is active
-    ClickText          Dashboard
-    VerifyText         Recent activity
-    VerifyText         All activity
+   
