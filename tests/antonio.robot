@@ -25,7 +25,8 @@ Login to GitHub and Validate User Page
     Click Text         Sign in
     
     Verify Text        Dashboard
-    Verify Text        Repositories
+    Verify Text        Top repositories
+    ClickElement       xpath=//button[@aria-label\='Open user navigation menu']
     Verify Text        Your repositories
     
     Is Text            Create repository    timeout=10
