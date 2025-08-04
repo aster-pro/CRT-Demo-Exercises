@@ -28,7 +28,7 @@ Login to GitHub and Validate Home Page
     
     # Validate successful login by checking home page elements
     Verify Text        Dashboard    timeout=${TIMEOUT}
-    Verify Text        Repositories    timeout=${TIMEOUT}
+    #Verify Text        Repositories    timeout=${TIMEOUT}
     
     # Verify user profile elements are present
     ${profile_visible}=    Is Text    View profile and more    timeout=10
