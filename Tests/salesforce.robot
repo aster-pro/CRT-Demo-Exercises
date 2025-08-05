@@ -1,10 +1,11 @@
 *** Settings ***
 Library    QForce
-Suite Setup        OpenBrowser    about:blank    chrome
+Suite Setup        OpenBrowser    about:blank    ${SFORCE_BROWSER}
 Resource    ../resources/salesforce.resource
 Suite Teardown         Close All Browsers
 
 *** Variables ***
+${SFORCE_BROWSER}            ${EMPTY}
 ${SFORCE_LOGIN_URL}          https://login.salesforce.com
 ${SFORCE_USERNAME}           ${EMPTY}
 ${SFORCE_PASSWORD}           ${EMPTY}
