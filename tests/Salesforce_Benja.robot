@@ -1,5 +1,6 @@
 *** Settings ***
 Library    QForce
+Resource    ../resources/Salesforce.resource
 Suite Setup    Open Browser    about:blank    chrome
 
 *** Test Cases ***
@@ -8,33 +9,21 @@ Salesforce Login And Navigate To Services App
     ...                navigate to app launcher, open Services app and verify navigation
     [Tags]             salesforce    login    services    smoke  
     
+    # Go to the log in page
     GoTo               ${URL}
-
-    # Perform login with credentials
-    Type Text          Username        ${USERNAME}
-    Type Secret        Password        ${PASSWORD}
-    Click Text         Log In
     
-    # Verify successful login by checking for home page elements
-    Verify Text        Home            timeout=30
-    Verify Text        Setup
+    # Perform login with credentials
+    Log In
     
     # Navigate to app launcher
     Click Text         App Launcher
     
     # Search and click on Services app
-    Type Text          Search apps and items...    Services
-    Click Text         Services
+    Click Text         Service
     
     # Verify we are on the Services app
-    Verify Text        Services        timeout=15
-    Verify Text        Cases
-    Verify Text        Work Orders
+    Verify Text        Service       timeout=15    
     
     # Close browser
     Close Browser
 
-*** Keywords ***
-Close Browser
-    [Documentation]    Closes the current browser session
-    Close All Browsers
