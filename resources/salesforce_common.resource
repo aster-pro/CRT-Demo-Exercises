@@ -13,7 +13,7 @@ Login To Salesforce
     Click Text         Log In
     Verify Text        Home                 timeout=30
 
-Generate Current Timestamp
+Now Timestamp
     [Documentation]    Creates a readable timestamp with date and hour
     [Arguments]        ${format}=%Y-%m-%d %H:%M:%S
     ${timestamp}=      Get Current Date    result_format=${format}
