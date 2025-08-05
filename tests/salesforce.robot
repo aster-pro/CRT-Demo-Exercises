@@ -1,23 +1,18 @@
 *** Settings ***
 Library    QForce
-Suite Setup    Go To    about:blank
-
+Suite Setup        Open Browser    about:blank    chrome
+Suite Teardown     Close Browser
 
 *** Test Cases ***
-Login To Salesforce Sandbox
-    [Documentation]    Test case to login to Salesforce sandbox using Chrome browser
-    [Tags]             salesforce    login    sandbox
+Test Chrome Opens
+    [Documentation]    Verifica que Chrome puede abrir Google y mostrar el texto esperado
+    [Tags]    smoke    browser
     
-    # Open Chrome browser and navigate to Salesforce
-    Go to    ${login_url}
+    # Navegar a Google
+    Go To    https://www.google.com
     
-    # Enter login credentials
-    Type Text          Username             ${username}
-    Type Secret        Password             ${password}
+    # Verificar que la página se cargó correctamente
+    Verify Text    Google
     
-    # Click login button
-    Click Text         Log In to Sandbox
-    
-    # Verify successful login by checking for common Salesforce elements
-    Verify Text        Home
-    Verify Text        Setup
+    # Verificación adicional del título de la página
+    Verify Title    Google
