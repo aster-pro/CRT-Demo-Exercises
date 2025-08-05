@@ -27,3 +27,4 @@ Create New oportunity in Sales App
     Login To Salesforce
     Navigate To Sales App
     Go to opportunities
+    Create New oportunity
