@@ -57,6 +57,6 @@ Create New Opportunity
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
-    Verify Text             ${opportunity_name}
+    Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
     Verify Text             Tester Aster
