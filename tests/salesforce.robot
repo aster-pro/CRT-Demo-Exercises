@@ -5,7 +5,7 @@ Suite Setup                OpenBrowser                 about:blank            ch
 
 *** Variables ***
 ${BROWSER}                 chrome
-
+${opportunity_name}=    Set Variable     Yair Test ${timestamp}
 
 *** Test Cases ***
 Salesforce Service Page Validation Test
@@ -55,7 +55,7 @@ Salesforce Sales New Opportunity Validation Test
     Verify Text            Cancel
 
     # Fill the required fields
-    TypeText               *Opportunity Name           Yair Test 
+    TypeText               *Opportunity Name        ${opportunity_name}    
     ComboBox               Search Accounts...          Salesforce             index=1
     PickList               Type                        Existing Business
 
