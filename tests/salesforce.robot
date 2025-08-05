@@ -1,11 +1,10 @@
 *** Settings ***
 Library    QForce
-Suite Setup        OpenBrowser    about:blank    chrome
+Resource    ../resources/salesforce_common.resource
 
 *** Variables ***
-${PAGE_URL}   
-${USERNAME}          
-${PASSWORD}          
+${BROWSER}           chrome
+
 
 
 *** Test Cases ***
@@ -13,15 +12,8 @@ Salesforce Service Page Validation Test
     [Documentation]    Test case to login to Salesforce and validate Service page
     [Tags]             salesforce    service    login
     
-    GoTo               ${PAGE_URL}
-    
-    # Handle login process
-    Type Text          Username             ${USERNAME}
-    Type Secret        Password             ${PASSWORD}
-    Click Text         Log In
-    
-    # Wait for successful login and verify we're in Salesforce
-    Verify Text        Home                 timeout=30
+    # Login to Salesforce
+    Login To Salesforce
     
     # Navigate to Service app
     Launch App         Service
