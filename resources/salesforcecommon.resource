@@ -46,11 +46,10 @@ Create New Opportunity
     Verify Text             Opportunities
     Click Text              New
     Verify Text             New Opportunity
-    ${timestamp}=           Get Current Date            result_format=%Y%m%d_%H%M%S
-    ${opportunity_name}=    Set Variable                Roberto_${timestamp}
-    Type Text               Opportunity Name            ${opportunity_name}
+    Type Text               Opportunity Name            Roberto1
+    Type Text               Account Name                Salesforce
     Pick List               Stage                       Prospecting
-    Type Text               Close Date                  12/31/2024
+    Type Text               Close Date                  12/31/2025
     Click Text              Save
     Verify Text             ${opportunity_name}
     Verify Text             was created
