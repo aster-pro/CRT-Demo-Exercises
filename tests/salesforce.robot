@@ -6,7 +6,7 @@ Suite Setup                OpenBrowser                 about:blank            ch
 
 *** Variables ***
 ${BROWSER}                 chrome
-${current_timestamp}=      Generate Current Timestamp
+${current_timestamp} =     Get Current Date    result_format=%Y-%m-%d %H:%M:%S
 
 *** Test Cases ***
 Salesforce Service Page Validation Test
@@ -57,7 +57,7 @@ Salesforce Sales New Opportunity Validation Test
     Verify Text            Cancel
 
     # Fill the required fields
-    TypeText               *Opportunity Name           yair
+    TypeText               *Opportunity Name           ${current_timestamp} yair
     ComboBox               Search Accounts...          Salesforce             index=1
     PickList               Type                        Existing Business
 
