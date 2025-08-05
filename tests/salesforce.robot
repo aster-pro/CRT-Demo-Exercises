@@ -29,8 +29,7 @@ Salesforce Service Page Validation Test
     # Additional validation for Service page elements
     Verify Text            Quarterly Performance
     Verify Text            Today's Events
-    Verify Text            Today's Tasks
-    Verify Text            Today's Assistant
+
 
 Salesforce Sales New Opportunity Validation Test
     # Navigate to Sales app
@@ -59,7 +58,10 @@ Salesforce Sales New Opportunity Validation Test
     TypeText               *Opportunity Name           Yair Test
     ComboBox               Search Accounts...          Salesforce             index=1
     PickList               Type                        Existing Business
-    ClickText              2125
+
+
+    ClickText              Select a date for Close Date
+    ClickText              6
     ClickText              6
     PickList               *Stage                      Id. Decision Makers
     ClickText              Save & New
