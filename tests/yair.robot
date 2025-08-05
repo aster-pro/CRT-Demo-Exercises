@@ -41,6 +41,7 @@ Login To GitHub And Validate User Page
     VerifyText         Your projects
     VerifyText         Your gists
 
+
     ClickText          Your profile           
     
     # Verify user profile information
@@ -48,12 +49,7 @@ Login To GitHub And Validate User Page
     VerifyText         Edit profile
     VerifyText         Show more activity
     
-    # Validate profile sections are present
-    ${profile_exists}=    IsText    Popular repositories    timeout=5
-    IF                    ${profile_exists}
-        VerifyText        Popular repositories
-    END
-    
+    # Validate contributions section
     ${contributions_exist}=    IsText    Contribution activity    timeout=5
     IF                         ${contributions_exist}
         VerifyText             Contribution activity
