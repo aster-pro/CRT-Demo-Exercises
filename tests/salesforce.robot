@@ -6,7 +6,7 @@ Suite Setup                OpenBrowser                 about:blank            ch
 
 *** Variables ***
 ${BROWSER}                 chrome
-${current_timestamp} =     Get Current Date    result_format=%Y-%m-%d %H:%M:%S
+
 
 *** Test Cases ***
 Salesforce Service Page Validation Test
@@ -33,6 +33,9 @@ Salesforce Service Page Validation Test
 
 
 Salesforce Sales New Opportunity Validation Test
+
+    ${current_timestamp} =     Get Current Date
+
     # Navigate to Sales app
     Launch App             Sales
     Verify Text            Sales                       timeout=20
