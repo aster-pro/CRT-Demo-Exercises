@@ -1,6 +1,6 @@
 *** Settings ***
 Library                         QForce
-Library                         ../resources/salesforcecommon.resource
+Resource                       ../resources/salesforcecommon.resource
 
 *** Variables ***
 ${BROWSER}                      chrome
