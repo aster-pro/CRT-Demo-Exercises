@@ -3,9 +3,7 @@ Library    QForce
 Suite Setup    Open Browser    about:blank    chrome
 
 *** Variables ***
-${URL}    https://velocity-page-1863.scratch.my.salesforce.com/
-${USERNAME}         
-${PASSWORD}        
+       
 
 *** Test Cases ***
 Salesforce Login And Navigate To Services App
