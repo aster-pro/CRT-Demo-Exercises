@@ -10,11 +10,18 @@ ${PASSWORD}                     ${EMPTY}
 ${SF_URL}                       https://velocity-page-1863.scratch.my.salesforce.com/
 
 *** Test Cases ***
-Login To Salesforce And Access Bolt Solutions App
-    [Documentation]             Test case to login to Salesforce and verify access to Bolt Solutions app
-    [Tags]                      salesforce                  login          bolt-solutions
+Create Opportunity With Roberto And Timestamp
+    [Documentation]             Test case to login to Salesforce, access Sales app, and create opportunity with Roberto plus timestamp
+    [Tags]                      salesforce    opportunity    sales    roberto
     
     Login To Salesforce
     Access Sales App
-    Verify Bolt Solutions App Access
+    Create New Opportunity
     Logout From Salesforce
+
+
+
+
+
+
+
