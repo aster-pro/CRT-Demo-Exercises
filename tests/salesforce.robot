@@ -77,15 +77,12 @@ Create Opportunity in Salesforce
     # Step 8: Save the opportunity
     Click Text         Save
     
-
-    ClickText    Cancel and close
+    # Close Modal Window
+    ClickText          Cancel and close
 
     # Step 9: Verify opportunity was created successfully
-    Verify Text        Test Opportunity Q2 2025
-    #Verify Field       Stage                       Prospecting
-    #Verify Field       Amount                      $50,000.00
+    Verify Text   Test Opportunity Q2 2025
     VerifyText    $50,000.00
-    #Verify Field       Account Name                Acme
     VerifyText    Acme
 
    
