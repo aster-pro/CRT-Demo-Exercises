@@ -52,5 +52,5 @@ Create New Opportunity
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
-    Verify Text             Roberto1
-    Verify Text             was created
+    Verify Text             Roberto2
+    Verify Text             Tester Aster
