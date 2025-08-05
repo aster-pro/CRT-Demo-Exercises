@@ -48,6 +48,7 @@ Create New Opportunity
     Verify Text             New Opportunity
     Type Text               Opportunity Name            Roberto2
     Type Text               Account Name                Salesforce
+    ComboBox                Search account...           Salesforce
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
