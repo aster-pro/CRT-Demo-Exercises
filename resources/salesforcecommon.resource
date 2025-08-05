@@ -51,5 +51,5 @@ Create New Opportunity
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
-    Verify Text             ${opportunity_name}
+    Verify Text             Roberto1
     Verify Text             was created
