@@ -36,7 +36,7 @@ Verify Service App Content
     [Documentation]    Verifies that Quarterly Performance and Assistant text are displayed
     Verify Text        Quarterly Performance
     Verify Text        Assistant
-Go to oportunities
+Go to opportunities
     [Documentation]    go to oportunities tab
     ClickText          Opportunities
     Verify Text        Opportunities
