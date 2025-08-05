@@ -4,9 +4,6 @@ Library                DateTime
 Library                String
 
 *** Variables ***
-#${future_date}        Get Current Date         increment=30 days      result_format=%m/%d/%Y
-#${today_timestamp}    Get Current Date         result_format=%Y%m%d_%H%M%S
-#${random_name}        Set Variable             TestOpp_${today_timestamp}
 ${Stage}               Prospecting
 ${Account}             Salesforce
 ${AccountIndex}        1
@@ -46,6 +43,9 @@ Create New oportunity
     [Documentation]    Create new opportunity from sales menu
     ClickText          New
     UseModal           On
+    ${future_date}        Get Current Date         increment=30 days      result_format=%m/%d/%Y
+    ${today_timestamp}    Get Current Date         result_format=%Y%m%d_%H%M%S
+    ${random_name}        Set Variable             TestOpp_${today_timestamp}
     TypeText           *Close Date              ${future_date}
     TypeText           *Opportunity Name        ${random_name}
     PickList           *Stage                   ${Stage}
