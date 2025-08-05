@@ -13,7 +13,7 @@ Login To Salesforce
     Type Text          Username       ${USERNAME}
     Type Secret        Password       ${PASSWORD}
     Click Text         Log In
-    Verify Text        Home
+    Verify Text        Seller Home
 
 Access Bolt Solutions App
     [Documentation]    Navigate to and launch Bolt Solutions app
