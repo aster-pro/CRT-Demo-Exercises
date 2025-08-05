@@ -2,9 +2,9 @@
 Library                QForce
 
 *** Variables ***
-${future_date}    Get Current Date    increment=30 days    result_format=%m/%d/%Y
-${timestamp}      Get Current Date    result_format=%Y%m%d_%H%M%S
-${random_name}    Set Variable    TestOpp_${timestamp}
+${future_date}=    Get Current Date    increment=30 days    result_format=%m/%d/%Y
+${timestamp}=      Get Current Date    result_format=%Y%m%d_%H%M%S
+${random_name}=    Set Variable    TestOpp_${timestamp}
 ${Stage}    Prospecting
 ${Account}    Salesforce
 ${AccountIndex}    1
