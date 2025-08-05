@@ -28,3 +28,9 @@ Verify Bolt Solutions App Access
     ELSE
         Verify Text    Bolt Solutions
     END
+
+Logout From Salesforce
+    [Documentation]             Logout from Salesforce
+    Click Item                  View profile
+    Click Text                  Log Out
+    Verify Text                 Username
