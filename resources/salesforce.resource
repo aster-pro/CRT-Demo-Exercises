@@ -1,5 +1,5 @@
 *** Settings ***
-Library                Qforce    
+Library                QForce    
 
 *** Variables ***
 
