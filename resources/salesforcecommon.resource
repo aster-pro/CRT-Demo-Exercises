@@ -48,7 +48,7 @@ Create New Opportunity
     Click Text              New
     Verify Text             New Opportunity
     ${current_date}=        Get Current Date            result_format=%Y%m%d_%H%M%S
-    ${opportunity_name}=    Set Suite Variable          Roberto${current_date}
+    ${opportunity_name}=    Set Variable          Roberto${current_date}
 
     Type Text               Opportunity Name            ${opportunity_name}
     ComboBox                Search Accounts...          Salesforce                  index=1
@@ -68,7 +68,7 @@ Validate Probability
     ClickText               Details
     Verify Text             10%
     Verify Text             ${opportunity_name}
-    
+
 
 
 
