@@ -18,3 +18,9 @@ Verify Service App Content
     Navigate To Service App
     Verify Service App Content
 
+Create New oportunity in Sales App
+    [Documentation]    Login to Salesforce, navigate to Service app and verify Quarterly Performance and Assistant text are displayed
+    [Tags]             NewOportunity
+    Launch Salesforce
+    Login To Salesforce
+    Navigate To Sales App
