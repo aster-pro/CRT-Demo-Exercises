@@ -35,11 +35,13 @@ Login To GitHub And Validate User Page
 
     
     # Navigate to user profile
-    VerifyText         Overview
-    VerifyText         Repositories
-    VerifyText         Projects
-    VerifyText         Packages
-    VerifyText         Stars
+    VerifyText         Your profile
+    VerifyText         Your repositories
+    VerifyText         Your Copilot
+    VerifyText         Your projects
+    VerifyText         Your gists
+
+    ClickText          Your profile           
     
     # Verify user profile information
     VerifyText         ${USERNAME}
@@ -57,5 +59,6 @@ Login To GitHub And Validate User Page
         VerifyText             Contribution activity
     END
     
+
     
    
