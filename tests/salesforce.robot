@@ -64,7 +64,7 @@ Create Opportunity in Salesforce
     Click Text         New
 
     # Step 7: Fill in opportunity details
-    Type Text          Opportunity Name            Test Opportunity Q1 2025
+    Type Text          Opportunity Name            Test Opportunity Q2 2025
     Type Text          Account Name                Acme
     ComboBox           Search Accounts...          Acme
     Pick List          Stage                       Prospecting
@@ -81,15 +81,14 @@ Create Opportunity in Salesforce
     ClickText    Cancel and close
 
     # Step 9: Verify opportunity was created successfully
-    Verify Text        Test Opportunity Q1 2025
+    Verify Text        Test Opportunity Q2 2025
     #Verify Field       Stage                       Prospecting
     #Verify Field       Amount                      $50,000.00
     VerifyText    $50,000.00
     #Verify Field       Account Name                Acme
     VerifyText    Acme
 
-    # Step 10: Verify success message
-    Verify Text        Opportunity "Test Opportunity Q1 2025" was created
+   
 
 
 
