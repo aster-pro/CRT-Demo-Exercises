@@ -17,4 +17,5 @@ Login To Salesforce And Access Bolt Solutions App
     Login To Salesforce
     Access Bolt Solutions App
     Verify Bolt Solutions App Access
+    Logout From Salesforce
 
