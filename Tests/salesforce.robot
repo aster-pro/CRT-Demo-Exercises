@@ -1,6 +1,7 @@
 *** Settings ***
 Library    QForce
 Library    DateTime
+Library    String
 Suite Setup        OpenBrowser    about:blank    chrome
 Resource    ../resources/salesforce.resource
 Suite Teardown         Close All Browsers
