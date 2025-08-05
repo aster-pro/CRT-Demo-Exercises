@@ -31,6 +31,6 @@ Verify Bolt Solutions App Access
 
 Logout From Salesforce
     [Documentation]             Logout from Salesforce
-    Click Item                  View profile
+    Click Element               xpath://button[@aria-haspopup='true' and contains(@class,'branding-userProfile-button')]
     Click Text                  Log Out
     Verify Text                 Username
