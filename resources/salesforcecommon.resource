@@ -59,12 +59,12 @@ Create New Opportunity
     Log To Console          ${opportunity_name}
     LogScreenshot
     ClickText               Cancel and close
-    
+
 Validate Probability
     [Documentation]         Validate the probability is 10%
     Click Text              Opportunities
-    Click Text              ${opportunity_name}
-    Click Text              Details
+    ClickText               ${opportunity_name}
+    ClickText               Details
     Verify Text             10%
     Verify Text             ${opportunity_name}
 
