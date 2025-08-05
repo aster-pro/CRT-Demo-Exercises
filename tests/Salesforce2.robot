@@ -27,7 +27,7 @@ Salesforce Login And Navigate To Services App
     Click Text         Opportunities
     
     #Get a timestamp
-    ${current_timestamp}=    Get Current Date
+    ${current_timestamp}=   Get Current Date
 
     #Create a new Oportunnity
     ClickText    New
