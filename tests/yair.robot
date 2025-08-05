@@ -1,5 +1,5 @@
 *** Settings ***
-Library                QWeb
+Library            QWeb
 Suite Setup        OpenBrowser    about:blank    chrome
 
 *** Variables ***
@@ -40,7 +40,6 @@ Login To GitHub And Validate User Page
     VerifyText         Your Copilot
     VerifyText         Your projects
     VerifyText         Your gists
-
 
     ClickText          Your profile           
     
