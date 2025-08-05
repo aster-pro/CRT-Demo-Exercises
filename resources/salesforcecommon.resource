@@ -58,4 +58,5 @@ Create New Opportunity
     Type Text               Close Date                  12/31/2025
     Click Text              Save
     Verify Text             ${opportunity_name}
+    Log                     ${opportunity_name}
     Verify Text             Tester Aster
