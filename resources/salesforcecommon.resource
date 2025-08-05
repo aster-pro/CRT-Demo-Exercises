@@ -46,7 +46,7 @@ Create New Opportunity
     Verify Text             Opportunities
     Click Text              New
     Verify Text             New Opportunity
-    Type Text               Opportunity Name            Roberto1
+    Type Text               Opportunity Name            Roberto2
     Type Text               Account Name                Salesforce
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
