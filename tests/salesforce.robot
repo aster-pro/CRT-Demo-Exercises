@@ -1,23 +1,26 @@
 *** Settings ***
 Library    QForce
+Library    DateTime
 Suite Setup        Open Browser    about:blank    chrome
 Suite Teardown     Close Browser
 
-*** Test Cases ***
-Test Chrome Opens
-    [Documentation]    Verifica que Chrome puede abrir Google y mostrar el texto esperado
-    [Tags]    smoke    browser
-    
-    # Navegar a Google
-    Go To    https://www.google.com
-    
-    # Verificar que la página se cargó correctamente
-    Verify Text    Google
+*** Variables ***
+${OPPORTUNITY_BASE_NAME}    Rodrigo
 
+*** Keywords ***
+Generate Opportunity Name
+    [Documentation]    Genera un nombre único para la opportunity con timestamp
+    ${timestamp}=    Get Current Date    result_format=%Y%m%d_%H%M%S
+    ${opportunity_name}=    Set Variable    ${OPPORTUNITY_BASE_NAME}_${timestamp}
+    Log    📝 Nombre generado: ${opportunity_name}    INFO
+    RETURN    ${opportunity_name}
+    
+*** Test Cases ***
 Login Salesforce And Navigate To Analytics
     [Documentation]    Inicia sesión en Salesforce y navega a la aplicación Analytics con verificaciones mejoradas
     [Tags]    salesforce    login    analytics
-    
+    ${opportunity_name}=    Generate Opportunity Name
+    Log    📝 Nombre generado para opportunity: ${opportunity_name}    INFO
     # Verificar que el navegador está funcionando correctamente
     Go To    https://www.google.com
     Verify Text    Google
@@ -49,14 +52,24 @@ Login Salesforce And Navigate To Analytics
     # Verificar que el App Launcher está disponible
     Verify Text    App Launcher    timeout=15
     
-    # Lanzar la aplicación Analytics con timeout extendido
-    Launch App    Analytics    timeout=30
+    # Lanzar la aplicación Opportunities con timeout extendido
+    Click Text    Opportunities    timeout=30
     
-    # Verificar que la aplicación Analytics se cargó correctamente
-    Verify Text    Analytics    timeout=20
+  
     
-    # Verificar que la sección correcta fue cargada
-    Verify Text    sales    timeout=15
+    ClickText    New
+    UseModal    On
+    ClickText    Select a date for Close Date
+    Click Text    Close Date    timeout=10
+    Sleep    1s
+    Click Text    Today    timeout=10
+    Type Text    *Opportunity Name    ${opportunity_name}    timeout=10
+    PickList    *Stage    Prospecting
+    ComboBox    Search Accounts...    Salesforce    index=2
+    TypeText    Amount    10000
+    PickList    Type    New Business
+    PickList    Lead Source    Trade Show
+    TypeText    Description    hola
+    ClickText    Save    partial_match=False
+    UseModal    Off
     
-    # Verificación adicional de que estamos en la página correcta
-    Verify Text    Dashboard    timeout=10
