@@ -57,6 +57,7 @@ Create New Opportunity
     Click Text              Save
     Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
+    LogScreenshot
     ClickText               Cancel and close
 
 
