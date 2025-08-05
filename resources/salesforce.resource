@@ -20,6 +20,10 @@ Navigate To Service App
     Launch App    Service
     Verify Text    Service
 
+Navigate To Sales App
+    [Documentation]    Uses app launcher to navigate to Service app
+    Launch App    Sales
+    Verify Text    Sales
 Verify Service App Content
     [Documentation]    Verifies that Quarterly Performance and Assistant text are displayed
     Verify Text    Quarterly Performance
