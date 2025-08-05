@@ -57,7 +57,7 @@ Salesforce Sales New Opportunity Validation Test
     Verify Text            Cancel
 
     # Fill the required fields
-    TypeText               *Opportunity Name           ${current_timestamp} yair
+    TypeText               *Opportunity Name           yair
     ComboBox               Search Accounts...          Salesforce             index=1
     PickList               Type                        Existing Business
 
