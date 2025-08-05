@@ -6,7 +6,7 @@ Suite Setup                OpenBrowser                 about:blank            ch
 
 *** Variables ***
 ${BROWSER}                 chrome
-${current_timestamp}=      Get Current Date
+${current_timestamp}=      Generate Current Timestamp
 
 *** Test Cases ***
 Salesforce Service Page Validation Test
@@ -43,6 +43,7 @@ Salesforce Sales New Opportunity Validation Test
 
     # Open New Opportunity creation window
     Click Text             New
+    UseModal               On
     Verify Text            New Opportunity             timeout=10
 
     # Verify the opportunity creation form is displayed
@@ -56,7 +57,7 @@ Salesforce Sales New Opportunity Validation Test
     Verify Text            Cancel
 
     # Fill the required fields
-    TypeText               *Opportunity Name           ${current_timestamp}yair
+    TypeText               *Opportunity Name           ${current_timestamp} yair
     ComboBox               Search Accounts...          Salesforce             index=1
     PickList               Type                        Existing Business
 
@@ -66,7 +67,7 @@ Salesforce Sales New Opportunity Validation Test
     ClickText              6
     PickList               *Stage                      Id. Decision Makers
     ClickText              Save & New
-    UseModal               On
+    
     UseModal               Off
 
     # Log successful completion without creating the opportunity
