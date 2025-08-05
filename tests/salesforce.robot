@@ -4,10 +4,7 @@ Library                QWeb
 Resource               ../resources/salesforceCommon.resource
 Suite Setup            OpenBrowser                 about:blank    chrome
 
-*** Variables ***
-${login_url}           https://velocity-page-1863.scratch.my.salesforce.com/
-${username}            hello@aster.pro
-${password}            Welcome@123
+*** Variables ***        
 
 
 *** Test Cases ***
