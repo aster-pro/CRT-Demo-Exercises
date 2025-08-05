@@ -1,11 +1,12 @@
 *** Settings ***
 Library                    QForce
+Library                    DateTime
 Resource                   ../resources/salesforce_common.resource
 Suite Setup                OpenBrowser                 about:blank            chrome
 
 *** Variables ***
 ${BROWSER}                 chrome
-${opportunity_name}=    Set Variable     Yair Test ${timestamp}
+${current_timestamp}=      Get Current Date
 
 *** Test Cases ***
 Salesforce Service Page Validation Test
@@ -55,7 +56,7 @@ Salesforce Sales New Opportunity Validation Test
     Verify Text            Cancel
 
     # Fill the required fields
-    TypeText               *Opportunity Name        ${opportunity_name}    
+    TypeText               *Opportunity Name           ${current_timestamp}yair
     ComboBox               Search Accounts...          Salesforce             index=1
     PickList               Type                        Existing Business
 
