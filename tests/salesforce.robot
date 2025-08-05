@@ -1,5 +1,6 @@
 *** Settings ***
 Library    QForce
+Suite Setup        OpenBrowser    about:blank    chrome
 
 *** Variables ***
 ${SALESFORCE_URL}    https://login.salesforce.com
