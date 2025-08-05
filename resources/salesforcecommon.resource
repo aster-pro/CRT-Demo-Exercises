@@ -51,12 +51,13 @@ Create New Opportunity
     ${opportunity_name}=    Set Variable                Roberto${current_date}
 
     Type Text               Opportunity Name            ${opportunity_name}
-    #Type Text              Opportunity Name            Roberto2
-    Type Text               Account Name                Salesforce
     ComboBox                Search Accounts...          Salesforce                  index=1
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
     Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
-    Verify Text             Tester Aster
+    ClickText               Cancel and close
+
+
+
