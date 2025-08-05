@@ -3,18 +3,17 @@ Library    QForce
 Suite Setup        OpenBrowser    about:blank    chrome
 
 *** Variables ***
-${SALESFORCE_URL}    https://login.salesforce.com
-${USERNAME}          your_username
-${PASSWORD}          your_password
-${BROWSER}           chrome
+${PAGE_URL}   
+${USERNAME}          
+${PASSWORD}          
+
 
 *** Test Cases ***
 Salesforce Service Page Validation Test
     [Documentation]    Test case to login to Salesforce and validate Service page
     [Tags]             salesforce    service    login
     
-    # Open browser and navigate to Salesforce
-    Open Browser       ${SALESFORCE_URL}    ${BROWSER}
+    GoTo               ${PAGE_URL}
     
     # Handle login process
     Type Text          Username             ${USERNAME}
