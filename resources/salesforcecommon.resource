@@ -19,6 +19,10 @@ Access Bolt Solutions App
     [Documentation]    Navigate to and launch Bolt Solutions app
     Launch App         Bolt Solutions
 
+Access Sales App
+    [Documentation]    Navigate to and launch Bolt Solutions app
+    Launch App         Sales
+
 Verify Bolt Solutions App Access
     [Documentation]    Validate that user has successfully accessed Bolt Solutions app
     Verify Text        Bolt Solutions
