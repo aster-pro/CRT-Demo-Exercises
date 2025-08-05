@@ -31,8 +31,8 @@ Login to GitHub and Validate Home Page
     Verify Text        Home    timeout=${TIMEOUT}
     
     # Verify user profile elements are present
-    ${profile_visible}=    Is Text    View profile and more    timeout=10
-    Should Be True     ${profile_visible}    Profile menu should be visible after login
+    ${profile_visible}=    Is Text    Latest changes   timeout=10
+    Should Be True     ${profile_visible}    Latest changes should be visible after login
     
     # Verify navigation elements
     ClickElement      xpath\=//button[@aria-label\="Open global navigation menu" and contains(@class, "AppHeader-button")]
