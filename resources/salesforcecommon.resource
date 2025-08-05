@@ -68,6 +68,8 @@ Validate Probability
     ClickText               Details
     Verify Text             10%
     Verify Text             ${opportunity_name}
+    
+
 
 
 
