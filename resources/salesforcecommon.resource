@@ -63,6 +63,7 @@ Create New Opportunity
 Validate Probability
     [Documentation]         Validate the probability is 10%
     Click Text              Opportunities
+    Log To Console          ${opportunity_name}
     ClickText               ${opportunity_name}
     ClickText               Details
     Verify Text             10%
