@@ -1,10 +1,7 @@
 *** Settings ***
 Library    QForce
+Suite Setup    Go To    about:blank
 
-*** Variables ***
-${SALESFORCE_URL}    https://velocity-page-1863.scratch.my.salesforce.com/    chrome
-${USERNAME}          hello@aster.pro
-${PASSWORD}          Welcome@123
 
 *** Test Cases ***
 Login To Salesforce Sandbox
@@ -12,11 +9,11 @@ Login To Salesforce Sandbox
     [Tags]             salesforce    login    sandbox
     
     # Open Chrome browser and navigate to Salesforce
-    Open Browser       ${SALESFORCE_URL}    chrome
+    Go to    ${login_url}
     
     # Enter login credentials
-    Type Text          Username             ${USERNAME}
-    Type Secret        Password             ${PASSWORD}
+    Type Text          Username             ${username}
+    Type Secret        Password             ${password}
     
     # Click login button
     Click Text         Log In to Sandbox
