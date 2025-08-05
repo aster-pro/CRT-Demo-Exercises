@@ -1,45 +1,47 @@
 *** Settings ***
-Library                         QForce
-Library                         QWeb
-Suite Setup                     OpenBrowser                 about:blank    chrome
+Library                QForce
+Library                QWeb
+Resource               ../resources/salesforceCommon.resource
+Suite Setup            OpenBrowser                 about:blank    chrome
 
 *** Variables ***
-${login_url}                    https://velocity-page-1863.scratch.my.salesforce.com/
-${username}                     hello@aster.pro
-${password}                     Welcome@123
+${login_url}           https://velocity-page-1863.scratch.my.salesforce.com/
+${username}            hello@aster.pro
+${password}            Welcome@123
 
 
 *** Test Cases ***
 Salesforce Service App Authentication and Validation
-    [Documentation]             Comprehensive test case that authenticates to Salesforce, navigates to Service app,
-    ...                         validates quarterly performance text, and verifies user profile information
+    [Documentation]    Comprehensive test case that authenticates to Salesforce, navigates to Service app,
+    ...                validates quarterly performance text, and verifies user profile information
 
     # Step 1: Open browser and navigate to Salesforce
-    Open Browser                ${login_url}                chrome
+    Open Browser       ${login_url}                chrome
 
     # Step 2: Authenticate to Salesforce
-    Type Text                   Username                    ${username}
-    Type Secret                 Password                    ${password}
-    Click Text                  Log In
+    Type Text          Username                    ${username}
+    Type Secret        Password                    ${password}
+    Click Text         Log In
 
     # Step 3: Verify successful login
-    Verify Text                 Home
+    Verify Text        Home
 
     # Step 4: Navigate to Service app
-    Launch App                  Service
+    Launch App         Service
 
     # Step 5: Validate quarterly performance text
-    Verify Text                 Quarterly Performance
+    Verify Text        Quarterly Performance
 
     # Step 6: Access user profile
-    Click Text                  View profile
+    Click Text         View profile
 
     # Step 7: Validate username in profile
-    Verify Text                 Tester Aster
+    Verify Text        Tester Aster
 
     # Step 8: Close profile if modal
-    Click Text                  View profile
+    Click Text         View profile
 
 
 
-*** Keywords ***
+
+
