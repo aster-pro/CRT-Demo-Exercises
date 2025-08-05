@@ -81,12 +81,8 @@ Create Opportunity in Salesforce
     ClickText          Cancel and close
 
     # Step 9: Verify opportunity was created successfully
-    Verify Text   Test Opportunity Q2 2025
+    VerifyText         Test Opportunity Q2 2025
     VerifyText    $50,000.00
     VerifyText    Acme
 
    
-
-
-
-
