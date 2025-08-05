@@ -30,9 +30,9 @@ Verify Service App Content
 Create New oportunity in Sales App
     [Documentation]             Login to Salesforce, navigate to Service app and verify Quarterly Performance and Assistant text are displayed
     [Tags]                      NewOportunity
-    Log To Console              ${future_date}
-    Log To Console              ${today_timestamp}
-    Log To Console              ${random_name}
+    # Log To Console              ${future_date}
+    # Log To Console              ${today_timestamp}
+    # Log To Console              ${random_name}
     Log To Console              ${current_date}
     Log To Console              ${opportunity_name}
     Launch Salesforce
