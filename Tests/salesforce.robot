@@ -10,9 +10,9 @@ Suite Teardown                  Close All Browsers
 ${SFORCE_LOGIN_URL}             https://login.salesforce.com
 ${SFORCE_USERNAME}              ${EMPTY}
 ${SFORCE_PASSWORD}              ${EMPTY}
-${future_date}                  Get Current Date            increment=30 days           result_format=%m/%d/%Y
-${today_timestamp}              Get Current Date            result_format=%Y%m%d_%H%M%S
-${random_name}                  Set Variable                TestOpp_${today_timestamp}
+#${future_date}                  Get Current Date            increment=30 days           result_format=%m/%d/%Y
+#${today_timestamp}              Get Current Date            result_format=%Y%m%d_%H%M%S
+#${random_name}                  Set Variable                TestOpp_${today_timestamp}
 
 ${current_date}=                Get Current Date            result_format=%Y%m%d_%H%M%S
 ${opportunity_name}=            Set Variable                Roberto${current_date}
