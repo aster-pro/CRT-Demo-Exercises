@@ -1,23 +1,23 @@
 *** Settings ***
 Library    QForce
+Suite Setup    Open Browser    about:blank    chrome
 
 *** Variables ***
-${login_url}        https://login.salesforce.com
-${username}         ${USERNAME}
-${password}         ${PASSWORD}
+${URL}    https://velocity-page-1863.scratch.my.salesforce.com/
+${USERNAME}         
+${PASSWORD}        
 
 *** Test Cases ***
 Salesforce Login And Navigate To Services App
     [Documentation]    Test case to login to Salesforce, verify successful login, 
     ...                navigate to app launcher, open Services app and verify navigation
-    [Tags]             salesforce    login    services    smoke
+    [Tags]             salesforce    login    services    smoke  
     
-    # Open browser and navigate to Salesforce login page
-    Open Browser       ${login_url}    chrome
-    
+    OpenBrowser        ${URL}        chrome
+
     # Perform login with credentials
-    Type Text          Username        ${username}
-    Type Secret        Password        ${password}
+    Type Text          Username        ${USERNAME}
+    Type Secret        Password        ${PASSWORD}
     Click Text         Log In
     
     # Verify successful login by checking for home page elements
