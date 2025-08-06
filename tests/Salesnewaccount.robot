@@ -36,6 +36,7 @@ Salesforce Login And Navigate To Services App
     TypeText    *Opportunity Name    ${current_timestamp}-Benja
     PickList    *Stage    Needs Analysis
     ComboBox    Search Accounts...    New Account
+    
     #Create a new account
     UseModal     Off                         
     Sleep        1s                          
