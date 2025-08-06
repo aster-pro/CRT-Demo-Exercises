@@ -19,16 +19,7 @@ Create Opportunity With Roberto And Timestamp
     Access Sales App
     Create New Opportunity With New Account Name
     Validate Probability
-    Logout From Salesforce
-
-
-
-    ClickText                   Cancel                      partial_match=False
-    ClickText                   New
-    UseModal                    On
-    Sleep                       3s
-    Click Element               xpath=//input[@role="combobox" and @placeholder="Search Accounts..."]
-    ClickText                   New Account                 anchor=Recent Accounts
+    Logout From Salesforce 
 
 
 
