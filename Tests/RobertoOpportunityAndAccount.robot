@@ -17,7 +17,7 @@ Create Opportunity With Roberto And Timestamp
 
     Login To Salesforce
     Access Sales App
-    Create New Opportunity
+    Create New Opportunity With New Account Name
     Validate Probability
     Logout From Salesforce
 
