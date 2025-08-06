@@ -24,3 +24,7 @@ Create Opportunity With Roberto And Timestamp
 
 
 
+    
+    TypeText    Phone    8442809070
+    TypeText    Website    www.testnow.com
+
