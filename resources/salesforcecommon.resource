@@ -85,17 +85,15 @@ Create New Opportunity With New Account Name
     Type Text               Account Name                Robert
     TypeText                Phone                       8442809070
     TypeText                Website                     www.testnow.com
-    Click Text              Save                        
-
-
+    Click Text              Save                     
     Type Text               Opportunity Name            ${opportunity_name}
-    ComboBox                Search Accounts...          Salesforce                  index=1
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
     Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
     LogScreenshot
+    Sleep                   3s
     ClickText               Cancel and close
 
 
