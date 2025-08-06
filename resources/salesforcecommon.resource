@@ -80,13 +80,13 @@ Create New Opportunity With New Account Name
     ${current_date}=        Get Current Date            result_format=%Y%m%d_%H%M%S
     ${opportunity_name}=    Set Variable                Roberto${current_date}
     Set Suite Variable      ${opportunity_name}
-    #ClickText               Search Accounts...
+    #ClickText              Search Accounts...
     ComboBox                Search Accounts...          New Account
     ClickText               New Account                 anchor=Recent Accounts
     Type Text               Account Name                Robert
     TypeText                Phone                       8442809070
     TypeText                Website                     www.testnow.com
-    Click Text              Save                     
+    Click Text              Save
     Type Text               Opportunity Name            ${opportunity_name}
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
@@ -94,8 +94,15 @@ Create New Opportunity With New Account Name
     Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
     LogScreenshot
-    #Sleep                   3s
+    #Sleep                  3s
     ClickText               Cancel and close            timeout=3
+
+
+    VerifyText              New Account
+    Type Text               Search Accounts...          New Account
+
+    ClickText               New Account                 anchor=Recent Accounts
+    UseModal                On
 
 
 
