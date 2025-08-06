@@ -83,6 +83,8 @@ Create New Opportunity With New Account Name
     ClickText               Search Accounts...
     ClickText               New Account                 anchor=Recent Accounts
     Type Text               Account Name                Robert
+    TypeText                Phone                       8442809070
+    TypeText                Website                     www.testnow.com
     Click Text              Save                        
 
 
