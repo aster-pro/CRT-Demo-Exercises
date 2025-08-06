@@ -7,7 +7,6 @@ Suite Setup                   OpenBrowser                 about:blank           
 *** Variables ***
 ${BROWSER}                    chrome
 
-
 *** Test Cases ***
 Salesforce Sales New Account Test
 
@@ -33,17 +32,17 @@ Salesforce Sales New Account Test
     # Open New Opportunity creation window
     Click Text                New
 
-    Click Text                *Account Name
-    Sleep                     2s
-    ClickText                 New Account
-
     TypeText                  *Opportunity Name           ${opp_name}
-
 
     PickList                  Type                        Existing Business
     TypeText                  *Close Date                 ${close_date}
     PickList                  *Stage                      Needs Analysis
 
+    Click Text                *Account Name
+    Sleep                     2s
+
+    # Create new account
+    ClickText                 New Account
     UseModal                  On
 
     TypeText                  *Account Name               ${gen_username}             anchor=Opportunity Name
