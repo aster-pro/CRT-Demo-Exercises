@@ -22,6 +22,7 @@ Create Opportunity With Roberto And Timestamp
     Logout From Salesforce 
 
 
+Sleep                        3s
 TypeText                *Account Name               Test
 
 
