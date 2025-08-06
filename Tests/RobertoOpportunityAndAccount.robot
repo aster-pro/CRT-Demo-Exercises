@@ -27,7 +27,7 @@ Create Opportunity With Roberto And Timestamp
     ClickText                   New
     UseModal                    On
     Sleep                       3s
-    Click Text                  Search Accounts...
+    Click Element               xpath=//input[@role="combobox" and @placeholder="Search Accounts..."]
     ClickText                   New Account                 anchor=Recent Accounts
 
 
