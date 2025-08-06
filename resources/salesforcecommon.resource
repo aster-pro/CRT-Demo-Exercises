@@ -71,7 +71,7 @@ Validate Probability
     Verify Text             ${opportunity_name}
 
 
- Create New Opportunity With New Account Name
+Create New Opportunity With New Account Name
     [Documentation]         Create a new opportunity with new account
     Click Text              Opportunities
     Verify Text             Opportunities
