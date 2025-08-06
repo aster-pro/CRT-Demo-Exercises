@@ -21,10 +21,6 @@ Create Opportunity With Roberto And Timestamp
     Validate Probability
     Logout From Salesforce
     Sleep                        3s
- TypeText                Phone                       8442809070
- TypeText                *Account Name               Test
-
-
 
 
 
