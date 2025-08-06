@@ -13,17 +13,18 @@ ${SF_URL}                       https://ability-velocity-7734.scratch.my.salesfo
 *** Test Cases ***
 Create Opportunity With Roberto And Timestamp
     [Documentation]             Test case to login to Salesforce, access Sales app, and create opportunity with Roberto plus timestamp
-    [Tags]                      salesforce                  opportunity               sales    roberto
+    [Tags]                      salesforce                  opportunity    sales    roberto
 
     Login To Salesforce
     Access Sales App
     Create New Opportunity With New Account Name
     Validate Probability
-    Logout From Salesforce 
-
-
-Sleep                        3s
+    Logout From Salesforce
+    Sleep                        3s
  TypeText                Phone                       8442809070
  TypeText                *Account Name               Test
+
+
+
 
 
