@@ -23,6 +23,7 @@ Create Opportunity With Roberto And Timestamp
 
 
 Sleep                        3s
-TypeText                *Account Name               Test
+ TypeText                Phone                       8442809070
+ TypeText                *Account Name               Test
 
 
