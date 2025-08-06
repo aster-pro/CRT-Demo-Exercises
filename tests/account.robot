@@ -37,19 +37,21 @@ Salesforce Sales New Account Test
     Sleep                     2s
     ClickText                 New Account
 
-    TypeText                  *Opportunity Name          ${opp_name}
-    
+    TypeText                  *Opportunity Name           ${opp_name}
 
-    PickList    Type    Existing Business
-    TypeText    *Close Date                        ${close_date}
-    PickList    *Stage    Needs Analysis
+
+    PickList                  Type                        Existing Business
+    TypeText                  *Close Date                 ${close_date}
+    PickList                  *Stage                      Needs Analysis
 
     UseModal                  On
 
-    TypeText                  *Account Name               ${gen_username}                anchor=Opportunity Name
+    TypeText                  *Account Name               ${gen_username}             anchor=Opportunity Name
     ClickText                 Save
 
     UseModal                  Off
+
+    ClickText                 Save & New
 
 
     # Log successful completion without creating the opportunity
