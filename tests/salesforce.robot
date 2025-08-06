@@ -68,18 +68,19 @@ Create Opportunity in Salesforce
     ${current_date}=        Get Current Date            result_format=%Y%m%d_%H%M%S
     ${opportunity_name}=    Set Variable                Test Opportunity_Gori${current_date}
     Type Text               Opportunity Name            ${opportunity_name}
-    
 
-   
-    
-    UseModal    On
+
+
+
+    UseModal                On
     Type Text               Account Name                Acme
-    #ClickText    New Account    anchor=Recent Accounts
-    
+    #ClickText              New Account                 anchor=Recent Accounts
 
-    ClickText    Search Accounts...
-    ClickText    New Account    anchor=Recent Accounts
-    UseModal    On
+
+    ClickItem               Search Accounts...          tag=input
+    ClickText               New Account                 anchor=Recent Accounts
+    UseModal                On
+
 
     Pick List               Stage                       Prospecting
     Pick List               Type                        New Business
