@@ -59,15 +59,17 @@ Create New Account in opportunities
     ## create new opportunity
     ClickText             New
     UseModal              On
+    UseModal              Off
+    UseModal              On
     ## create new account
-    ClickElement          xpath\=//input[@placeholder\='Search Accounts...'] 
+    ClickElement          xpath\=//input[@placeholder\='Search Accounts...']
     ClickText             New Account                 anchor=Recent Accounts
     #UseModal             On
     ${today_timestamp}    Get Current Date            result_format=%Y%m%d_%H%M%S
     ${random_account}     Set Variable                TestAcc_${today_timestamp}
-    TypeText              *Account Name               ${random_account}                  anchor=Opportunity Name
+    TypeText              *Account Name               ${random_account}           anchor=Opportunity Name
     TypeText              Phone                       +528332226666
-    PickList              Type                        Analyst
+    TypeText              Website                     www.google.com
     TypeText              Description                 this is a new account for testing
     ClickText             Save                        anchor=Save & New
     UseModal              Off
