@@ -60,8 +60,7 @@ Create New Account in opportunities
     ClickText             New
     UseModal              On
     ## create new account
-    ComboBox              Search Accounts...          ${EMPTY}                  #index=${AccountIndex}
-    ClickText             Search Accounts...
+    ClickElement          xpath\=//input[@placeholder\='Search Accounts...'] 
     ClickText             New Account                 anchor=Recent Accounts
     #UseModal             On
     ${today_timestamp}    Get Current Date            result_format=%Y%m%d_%H%M%S
