@@ -93,8 +93,8 @@ Create New Opportunity With New Account Name
     Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
     LogScreenshot
-    Sleep                   3s
-    ClickText               Cancel and close
+    #Sleep                   3s
+    ClickText               Cancel and close            timeout=3
 
 
 
