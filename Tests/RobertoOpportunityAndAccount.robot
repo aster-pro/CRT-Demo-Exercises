@@ -20,4 +20,3 @@ Create Opportunity With Roberto And Timestamp
     Create New Opportunity With New Account Name
     Validate Probability
     Logout From Salesforce
-    Sleep                        3s
