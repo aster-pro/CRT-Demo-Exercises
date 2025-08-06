@@ -53,3 +53,9 @@ Create New oportunity
     VerifyPickList     Lead Source              ${LeadSource}
     ClickText          Save                     partial_match=False
     UseModal           Off
+
+Create New Account in opportunities
+    [Documentation]    Create new opportunity from sales menu
+    ClickText          New
+    UseModal           On
+    
