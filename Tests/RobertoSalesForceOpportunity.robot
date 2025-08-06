@@ -23,6 +23,8 @@ Create Opportunity With Roberto And Timestamp
 
 
 
+Click Text               New Account                 anchor=Recent Accounts
+
 
 
 
