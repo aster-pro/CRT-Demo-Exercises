@@ -33,9 +33,20 @@ Salesforce Login And Navigate To Services App
     ClickText    New
     UseModal     On
     TypeText    *Close Date    12/31/2024
-    TypeText    *Opportunity Name    ${current_timestamp}benja
+    TypeText    *Opportunity Name    ${current_timestamp}-Benja
     PickList    *Stage    Needs Analysis
-    ComboBox    Search Accounts...    Salesforce    index=1
+    ComboBox    Search Accounts...    New Account
+    #Create a new account
+    UseModal     Off                         
+    Sleep        1s                          
+    UseModal     On
+    
+    TypeText     *Phone               8446078989
+    TypeText     *Account Text        Jerenis-${current_timestamp}
+    TypeText     *Fax                 Fax Direction
+    TypeText     *Website             test.com
+    ClickText    Save                 partial_match=False
+
     PickList    Type    New Business
     TypeText    Amount    1000000
     PickList    Lead Source    Public Relations
