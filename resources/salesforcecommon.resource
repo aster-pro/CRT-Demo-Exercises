@@ -81,7 +81,7 @@ Create New Opportunity With New Account Name
     ${opportunity_name}=    Set Variable                Roberto${current_date}
     Set Suite Variable      ${opportunity_name}
     #ClickText               Search Accounts...
-    ComboBox                Search Accounts...
+    ComboBox                Search Accounts...          New Account
     ClickText               New Account                 anchor=Recent Accounts
     Type Text               Account Name                Robert
     TypeText                Phone                       8442809070
