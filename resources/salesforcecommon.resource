@@ -82,7 +82,7 @@ Create New Opportunity With New Account Name
     Set Suite Variable      ${opportunity_name}
     Click Element           xpath=//input[@role="combobox" and @placeholder="Search Accounts..."]
     ClickText               New Account                 anchor=Recent Accounts
-    Type Text               Account Name                Robert
+    TypeText                *Account Name               Test                       
     TypeText                Phone                       8442809070
     TypeText                Website                     www.testnow.com
     Click Text              Save
@@ -93,5 +93,5 @@ Create New Opportunity With New Account Name
     Verify Text             Opportunity "${opportunity_name}" was created.
     Log To Console          ${opportunity_name}
     LogScreenshot
-    Sleep                  3s
+    Sleep                   3s
     ClickText               Cancel and close            timeout=3
