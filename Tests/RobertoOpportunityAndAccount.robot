@@ -22,6 +22,6 @@ Create Opportunity With Roberto And Timestamp
     Logout From Salesforce 
 
 
-
+TypeText                *Account Name               Test
 
 
