@@ -86,6 +86,7 @@ Create New Opportunity With New Account Name
     TypeText                Website                     www.testnow.com
     TypeText                *Account Name               RobTest                     anchor=Opportunity Name
     Click Text              Save
+    Sleep                   5s
     Type Text               Opportunity Name            ${opportunity_name}
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
