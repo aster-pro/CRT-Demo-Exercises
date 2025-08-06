@@ -8,7 +8,7 @@ Suite Setup                   Setup Browser
 ${BROWSER}                    chrome
 ${USERNAME}                   ${EMPTY}
 ${PASSWORD}                   ${EMPTY}
-${SF_URL}                     https://velocity-page-1863.scratch.my.salesforce.com/
+${SF_URL}                     https://ability-velocity-7734.scratch.my.salesforce.com/
 
 *** Test Cases ***
 Create Opportunity With Roberto And Timestamp
