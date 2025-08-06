@@ -84,7 +84,8 @@ Create New Opportunity With New Account Name
     ClickText               New Account                 anchor=Recent Accounts
     TypeText                Phone                       8442809070
     TypeText                Website                     www.testnow.com
-    TypeText                css=input[name="Name"]      RobAccount
+    Click Element           css=input[name="Name"]
+    TypeText                name                       RobTest
     Click Text              Save
     Type Text               Opportunity Name            ${opportunity_name}
     Pick List               Stage                       Prospecting
