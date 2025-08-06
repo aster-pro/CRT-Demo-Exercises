@@ -88,12 +88,3 @@ Create Opportunity in Salesforce
     VerifyText              $50,000.00
     VerifyText              Acme
 
-Create New Opportunity with New Account
-    [Documentation]           Test case to login to Salesforce, access Sales app, and create opportunity with Roberto plus timestamp
-    [Tags]                    salesforce                  opportunity    sales
-    Open Browser            ${login_url}                chrome
-    Login To Salesforce
-    Access Sales App
-    Create New Opportunity
-    Validate Probability
-    Logout From Salesforce
