@@ -48,6 +48,7 @@ Create New oportunity
     ${random_name}        Set Variable                TestOpp_${today_timestamp}
     TypeText              *Close Date                 ${future_date}
     TypeText              *Opportunity Name           ${random_name}
+    TypeText              *Opportunity Name           ${null}
     PickList              *Stage                      ${Stage}
     ComboBox              Search Accounts...          ${Account}                  index=${AccountIndex}
     VerifyPickList        Lead Source                 ${LeadSource}
@@ -59,8 +60,6 @@ Create New Account in opportunities
     ## create new opportunity
     ClickText             New
     UseModal              On
-    UseModal              Off
-    UseModal              On
     ## create new account
     ClickElement          xpath\=//input[@placeholder\='Search Accounts...']
     ClickText             New Account                 anchor=Recent Accounts
@@ -71,7 +70,9 @@ Create New Account in opportunities
     TypeText              Phone                       +528332226666
     TypeText              Website                     www.google.com
     TypeText              Description                 this is a new account for testing
-    ClickText             Save                        anchor=Save & New
+    ClickElement          xpath\=//button[text()\='Save']
+    ClickText             Save                        anchor=Save
+    ClickElement    xpath\=//div[contains(@class,'second-modal-class')]//button[text()\='Save']
     UseModal              Off
     VerifyText            Account "Accountnew" was created timeout=3
     #VerifyText           was created
