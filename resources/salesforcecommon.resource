@@ -85,7 +85,7 @@ Create New Opportunity With New Account Name
     TypeText                Phone                       8442809070
     TypeText                Website                     www.testnow.com
     TypeText                *Account Name               RobTest                     anchor=Opportunity Name
-    Click Text              Save
+    ClickText               Save                        anchor=Save & New
     Sleep                   5s
     Type Text               Opportunity Name            ${opportunity_name}
     Pick List               Stage                       Prospecting
