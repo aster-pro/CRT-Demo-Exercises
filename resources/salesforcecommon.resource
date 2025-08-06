@@ -82,9 +82,9 @@ Create New Opportunity With New Account Name
     Set Suite Variable      ${opportunity_name}
     Click Element           xpath=//input[@role="combobox" and @placeholder="Search Accounts..."]
     ClickText               New Account                 anchor=Recent Accounts
-    TypeText                *Account Name               Test                       
     TypeText                Phone                       8442809070
     TypeText                Website                     www.testnow.com
+    TypeText                css=input[name="Name"]      RobAccount
     Click Text              Save
     Type Text               Opportunity Name            ${opportunity_name}
     Pick List               Stage                       Prospecting
