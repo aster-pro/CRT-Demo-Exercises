@@ -71,7 +71,31 @@ Validate Probability
     Verify Text             ${opportunity_name}
 
 
-Create New Account
+ Create New Opportunity With New Account Name
+    [Documentation]         Create a new opportunity with new account
+    Click Text              Opportunities
+    Verify Text             Opportunities
+    Click Text              New
+    Verify Text             New Opportunity
+    ${current_date}=        Get Current Date            result_format=%Y%m%d_%H%M%S
+    ${opportunity_name}=    Set Variable                Roberto${current_date}
+    Set Suite Variable      ${opportunity_name}
+    ClickText               Search Accounts...
+    ClickText               New Account                 anchor=Recent Accounts
+    Type Text               Account Name                Robert
+    Click Text              Save                        
+
+
+    Type Text               Opportunity Name            ${opportunity_name}
+    ComboBox                Search Accounts...          Salesforce                  index=1
+    Pick List               Stage                       Prospecting
+    Type Text               Close Date                  12/31/2025
+    Click Text              Save
+    Verify Text             Opportunity "${opportunity_name}" was created.
+    Log To Console          ${opportunity_name}
+    LogScreenshot
+    ClickText               Cancel and close
+
 
 
 
