@@ -31,7 +31,6 @@ Salesforce Sales New Account Test
 
     # Open New Opportunity creation window
     Click Text                New
-
     TypeText                  *Opportunity Name           ${opp_name}
 
     PickList                  Type                        Existing Business
@@ -41,16 +40,16 @@ Salesforce Sales New Account Test
     Click Text                *Account Name
     Sleep                     2s
 
-    # Create new account
+    # Open Create new account window
     ClickText                 New Account
     UseModal                  On
 
     TypeText                  *Account Name               ${gen_username}             anchor=Opportunity Name
-    ClickText                 Save
+    ClickText                 Save                        anchor=Shipping Street
 
     UseModal                  Off
 
-    ClickText                 Save & New
+    ClickText                 Save                        anchor=Save & Now
 
 
     # Log successful completion without creating the opportunity
