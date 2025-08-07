@@ -26,7 +26,7 @@ Login Salesforce And Navigate To Analytics
     Verify Text    Google
     
     # Navegar a la instancia de Salesforce con timeout extendido
-    Go To    https://velocity-page-1863.scratch.my.salesforce.com/    timeout=30
+    Go To    https://ability-velocity-7734.scratch.my.salesforce.com/    timeout=30
     
     # Verificar que la página de Salesforce se cargó correctamente
     Verify Text    Salesforce    timeout=20
@@ -54,9 +54,6 @@ Login Salesforce And Navigate To Analytics
     
     # Lanzar la aplicación Opportunities con timeout extendido
     Click Text    Opportunities    timeout=30
-    
-  
-    
     ClickText    New
     UseModal    On
     ClickText    Select a date for Close Date
@@ -65,7 +62,8 @@ Login Salesforce And Navigate To Analytics
     Click Text    Today    timeout=10
     Type Text    *Opportunity Name    ${opportunity_name}    timeout=10
     PickList    *Stage    Prospecting
-    ComboBox    Search Accounts...    Salesforce    index=2
+    # Buscar y seleccionar cuenta
+    ComboBox    Search Accounts...    TestAcc_20250806_214841
     TypeText    Amount    10000
     PickList    Type    New Business
     PickList    Lead Source    Trade Show
