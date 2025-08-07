@@ -5,7 +5,7 @@ Library                         String
 
 *** Variables ***
 ${Stage}                        Prospecting
-${Account}                      Salesforce
+${Account}                      salesforce.com
 ${AccountIndex}                 1
 ${LeadSource}                   Web
 ${opportunity_name}             ${empty}
