@@ -13,7 +13,7 @@ ${SF_URL}                       https://ability-velocity-7734.scratch.my.salesfo
 
 *** Keywords ***
 Setup Browser
-    
+    [Documentation]         Open Browser
     Open Browser            about:blank                 ${BROWSER}
     Go To                   ${SF_URL}
 
@@ -25,7 +25,7 @@ Login To Salesforce
     Verify Text             Seller Home
  
  Create New Opportunity
-    
+    #[Documentation]         Create a New Opportunity
     Click Text              Opportunities
     Verify Text             Opportunities
     Click Text              New
