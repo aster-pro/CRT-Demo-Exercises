@@ -13,19 +13,19 @@ ${PASSWORD}                 ${EMPTY}
 ${SF_URL}                   https://ability-velocity-7734.scratch.my.salesforce.com/
 
 *** Keywords ***
-Setup Browser
+Opportunity
     [Documentation]         Open Browser
     Open Browser            about:blank                 ${BROWSER}
     Go To                   ${SF_URL}
 
-Login To Salesforce
+#Login To Salesforce
     [Documentation]         Perform login to Salesforce using credentials
     Type Text               Username                    ${USERNAME}
     Type Secret             Password                    ${PASSWORD}
     Click Text              Log In
     Verify Text             Seller Home
     
- Create New Opportunity
+# Create New Opportunity
     #[Documentation]        Create a New Opportunity
     Click Text              Opportunities
     Verify Text             Opportunities
