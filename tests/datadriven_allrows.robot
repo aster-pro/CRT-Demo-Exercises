@@ -12,6 +12,7 @@ Example Test with ${opportunity_name} ${acccount_name} ${age}
 *** Keywords ***
 Example Test
     [Arguments]    ${opportunity_name}    ${acccount_name}    ${age}    ${city}
+    [Tags]         datadrivenAll
     # Your tests here, this is just an example
     # just use the values from excel using variable names
     Log    ${opportunity_name}
