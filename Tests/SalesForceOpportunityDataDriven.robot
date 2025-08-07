@@ -43,7 +43,6 @@ Opportunity
     Pick List          Stage                       ${stage}
     Type Text          Close Date                  12/31/2025
     Type Text          Amount                      ${amount}
-    Type Text          Probability (%)             12/31/2025
     Pick List          Type                        ${type}
     Pick List          Lead Source                 ${lead_source}
     Type Text          Next Step                   ${next_step}
