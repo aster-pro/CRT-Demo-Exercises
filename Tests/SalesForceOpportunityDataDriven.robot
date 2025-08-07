@@ -5,6 +5,12 @@ Library                     DateTime
 Resource                        ../resources/salesforcecommon.resource
 Suite Setup                     Setup Browser
 
+*** Variables ***
+${BROWSER}                      chrome
+${USERNAME}                     ${EMPTY}
+${PASSWORD}                     ${EMPTY}
+${SF_URL}                       https://ability-velocity-7734.scratch.my.salesforce.com/
+
 *** Keywords ***
 Setup Browser
     
