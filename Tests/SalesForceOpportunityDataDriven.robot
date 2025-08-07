@@ -18,8 +18,7 @@ Opportunity with     ${opportunity_name}     ${account_name} ${stage}  ${type}  
 
 *** Keywords ***
 Opportunity
-[Arguments]    ${opportunity_name}        ${account_name}    ${stage}    ${type}    ${amount}    ${probability}    ${lead_source}    ${next_step}    ${description}
-
+    [Arguments]        ${opportunity_name}         ${account_name}             ${stage}                 ${type}    ${amount}    ${probability}    ${lead_source}    ${next_step}    ${description}
     [Documentation]    Open Browser
     Open Browser       about:blank                 ${BROWSER}
     Go To              ${SF_URL}
