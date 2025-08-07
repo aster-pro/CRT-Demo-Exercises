@@ -7,16 +7,13 @@ Test Template                Example Test
 
 
 *** Test Cases ***
-Salesforce Login And Navigate To Services App
-    [Documentation]          Test case to login to Salesforce, verify successful login,
-    ...                      navigate to app launcher, open Services app and verify navigation
-    [Tags]                   DataDriver
-
 
 *** Keywords ***
 
 Example Test
+    [Documentation]          Test for DataDriver
     [Arguments]              ${opportunity_name}         ${probability}              ${amount}    ${account_name}    ${stage}
+    [Tags]                   DataDriver
     # Go to the log in page
     GoTo                     ${URL}
 
