@@ -20,7 +20,7 @@ Salesforce Create Opportunity
 *** Keywords ***
 Create Opportunity From Excel Data
     [Documentation]          Template keyword to create opportunity with Excel data
-    [Arguments]              ${opportunity_name}         ${account_name}        ${opportunity_type}    ${stage}   ${amount}    ${probability}    ${description}
+    [Arguments]              ${opportunity_name}         ${account_name}        ${type}    ${stage}   ${amount}    ${probability}    ${description}
 
     ${current_timestamp}=    Get Current Date
     ${close_date}=           Generate Future Date One Month
@@ -52,7 +52,7 @@ Create Opportunity From Excel Data
     Type Text                *Opportunity Name           ${opportunity_name}
     Type Text                Search Accounts...          ${account_name}
     Click Text               ${account_name}
-    Pick List                Type                        ${opportunity_type}
+    Pick List                Type                        ${type}
 
     # Set close date based on offset from Excel
     TypeText                 *Close Date                 ${close_date}
@@ -71,3 +71,4 @@ Create Opportunity From Excel Data
     Verify Text              ${opportunity_name}         timeout=10
 
     # Log successful completion with all data
+    Log                    New Opportunity form opened successfully - ready for data entry
