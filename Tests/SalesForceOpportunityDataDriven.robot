@@ -4,6 +4,7 @@ Library                     QForce
 Library                     DateTime
 Resource                    ../resources/salesforcecommon.resource
 Suite Setup                 Setup Browser
+Test Template               Opportunity
 
 *** Variables ***
 ${BROWSER}                  chrome
