@@ -5,6 +5,7 @@ Suite Teardown    Close All Browsers
 
 *** Test Cases ***
 Example test ${opportunity_name} ${acccount_name} ${age}
+    [Tags]            datadriven
     Log To Console    ${opportunity_name}
     Log To Console    ${acccount_name}
     Log To Console    ${age}    
