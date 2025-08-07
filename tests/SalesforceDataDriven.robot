@@ -7,6 +7,7 @@ Test Template                Example Test
 
 
 *** Test Cases ***
+Example Test
 
 *** Keywords ***
 
