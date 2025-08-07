@@ -34,7 +34,7 @@ Login To Salesforce
     ${opportunity_name}=    Set Variable                Roberto${current_date}
     Set Suite Variable      ${opportunity_name}
     Type Text               Opportunity Name            ${opportunity_name}
-    ComboBox                Search Accounts...          Salesforce                  index=1
+    ComboBox                Search Accounts...          Salesforce                  index=0
     Pick List               Stage                       Prospecting
     Type Text               Close Date                  12/31/2025
     Click Text              Save
