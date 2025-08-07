@@ -1,17 +1,30 @@
 *** Settings ***
 Library                      QForce
 Library                      DateTime
+Library    DataDriver
 Resource                     ../resources/salesforce_common.resource
 Suite Setup                  OpenBrowser                 about:blank            chrome
+Suite Teardown    Close All Browsers
+Test Template    Create Opportunity From Excel Data
+
 
 *** Variables ***
 ${BROWSER}                   chrome
 
 
 *** Test Cases ***
-Salesforce Service Page Validation Test
-    [Documentation]          Test case to login to Salesforce and validate Service page
-    [Tags]                   salesforce                  service                login
+
+Salesforce Create Opportunity
+    [Tags]    Datadriven_opp
+
+
+*** Keywords ***
+Create Opportunity From Excel Data
+    [Documentation]          Template keyword to create opportunity with Excel data
+    [Arguments]              ${opportunity_name}         ${account_name}        ${opportunity_type}    ${stage}   ${amount}    ${probability}    ${description}
+
+    ${current_timestamp}=    Get Current Date
+    ${close_date}=           Generate Future Date One Month
 
     # Navigate to the page URL
     GoTo                     ${URL}
@@ -22,16 +35,6 @@ Salesforce Service Page Validation Test
     # Navigate to Sales app
     Launch App               Sales
     Verify Text              Sales                       timeout=20
-
-
-*** Keywords ***
-Create Opportunity From Excel Data
-    [Documentation]          Template keyword to create opportunity with Excel data
-    [Arguments]              ${opportunity_name}         ${account_name}        ${opportunity_type}    ${stage}    ${close_date_offset}    ${amount}    ${probability}    ${description}
-
-    ${current_timestamp}=    Get Current Date
-    ${close_date}=           Generate Future Date One Month
-
 
     # Navigate to Sales app
     Launch App               Sales
