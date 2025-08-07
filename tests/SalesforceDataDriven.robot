@@ -8,13 +8,14 @@ Test Template                Example Test
 
 *** Test Cases ***
 Example Test
+    [Tags]                   DataDriver
 
 *** Keywords ***
 
 Example Test
     [Documentation]          Test for DataDriver
     [Arguments]              ${opportunity_name}         ${probability}              ${amount}    ${account_name}    ${stage}
-    [Tags]                   DataDriver
+       
     # Go to the log in page
     GoTo                     ${URL}
 
