@@ -1,7 +1,8 @@
 *** Settings ***
 Library                      QForce
+Library    QWeb
 Library                      DateTime
-Library    DataDriver
+Library    DataDriver    reader_class=TestDataApi    name=salesforce_test.xlsx
 Resource                     ../resources/salesforce_common.resource
 Suite Setup                  OpenBrowser                 about:blank            chrome
 Suite Teardown    Close All Browsers
