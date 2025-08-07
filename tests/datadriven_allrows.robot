@@ -7,7 +7,7 @@ Suite Teardown     Close All Browsers
 Test Template      Example Test
 
 *** Test Cases ***
-Example Test with ${opportunity_name} ${acccount_name} ${age}
+Example Test with ${opportunity_name}
     [Tags]    datadrivenAll
 
 *** Keywords ***
