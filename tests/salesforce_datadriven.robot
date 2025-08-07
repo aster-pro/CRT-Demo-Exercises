@@ -30,6 +30,8 @@ Create Opportunity From Excel Data
     [Arguments]            ${opportunity_name}    ${account_name}    ${opportunity_type}    ${stage}    ${close_date_offset}    ${amount}    ${probability}    ${description}
     
     ${current_timestamp}=  Get Current Date
+    ${close_date}=         Generate Futu
+
     
     # Navigate to Sales app
     Launch App             Sales
