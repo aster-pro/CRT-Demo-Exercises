@@ -1,4 +1,4 @@
-https://eu-robotic.copado.com/editor?jobId=100024&robotId=49020&orgId=42695&projectId=62327&editorMode=scripting&activeFile=tests%2Fsalesforce_datadriven.robot$0*** Settings ***
+*** Settings ***
 Library    QWeb
 Library    DataDriver    reader_class=TestDataApi    name=salesforce_test.xlsx
 Suite Setup       Open Browser        about:blank     Chrome
