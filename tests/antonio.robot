@@ -57,7 +57,9 @@ Demo Test
     UseModal           On
 
 Using Python Library
-    greetings
+    ${message}    Greetings    Saltillo team!
+    Log           ${message}
+    Log To Console          ${message}
 
 *** Keywords ***
 Close Browser
