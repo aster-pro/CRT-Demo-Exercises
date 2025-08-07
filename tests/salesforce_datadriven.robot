@@ -13,9 +13,8 @@ ${BROWSER}                   chrome
 
 
 *** Test Cases ***
-Salesforce Create Opportunity
+Create Opportunity From Excel Data with ${opportunity_name} ${account_name} ${type} ${stage} ${amount} ${probability} ${description}
     [Tags]    Datadriven_opp
-
 
 *** Keywords ***
 Create Opportunity From Excel Data
