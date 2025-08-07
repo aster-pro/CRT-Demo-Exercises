@@ -34,7 +34,9 @@ Opportunity
     #[Documentation]                               Create a New Opportunity
     Click Text         Opportunities
     Verify Text        Opportunities
+    LogScreenshot
     Click Text         New
+    LogScreenshot
     Verify Text        New Opportunity
     #${current_date}=                              Get Current Date            result_format=%Y%m%d_%H%M%S
     #${opportunity_name}=                          Set Variable                Roberto${current_date}
@@ -49,6 +51,7 @@ Opportunity
     Type Text          Next Step                   ${next_step}
     Type Text          Description                 ${description}
     ComboBox           Search Accounts...          ${account_name}             index=4
+    LogScreenshot
 
     Click Text         Save
     Verify Text        Opportunity "${opportunity_name}" was created.
