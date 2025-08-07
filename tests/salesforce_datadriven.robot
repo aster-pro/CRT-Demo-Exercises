@@ -50,8 +50,7 @@ Create Opportunity From Excel Data
 
     # Fill all opportunity fields with Excel data
     Type Text                *Opportunity Name           ${opportunity_name}
-    Type Text                Search Accounts...          ${account_name}
-    Click Text               ${account_name}
+    ComboBox                Search Accounts...          ${account_name}
     Pick List                Type                        ${type}
 
     # Set close date based on offset from Excel
