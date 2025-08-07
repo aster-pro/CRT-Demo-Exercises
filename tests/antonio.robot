@@ -1,5 +1,6 @@
 *** Settings ***
 Library                QForce
+Library                ../libraries/pythonLib.py
 Suite Setup            Open Browser                about:blank               chrome
 Suite Teardown         Close All Browsers
 
@@ -54,6 +55,9 @@ Demo Test
     VerifyText         New Account
     ClickText          New Account                 anchor=Recent Accounts
     UseModal           On
+
+Using Python Library
+    greetings
 
 *** Keywords ***
 Close Browser
