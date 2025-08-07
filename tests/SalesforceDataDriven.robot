@@ -10,7 +10,7 @@ Test Template                Example Test
 Salesforce Login And Navigate To Services App
     [Documentation]          Test case to login to Salesforce, verify successful login,
     ...                      navigate to app launcher, open Services app and verify navigation
-    [Tags]                   salesforce                  login                       services     smoke
+    [Tags]                   DataDriver
 
 
 *** Keywords ***
