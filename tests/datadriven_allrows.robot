@@ -8,6 +8,7 @@ Test Template      Example Test
 
 *** Test Cases ***
 Example Test with ${opportunity_name} ${acccount_name} ${age}
+    [Tags]    datadrivenAll
 
 *** Keywords ***
 Example Test
