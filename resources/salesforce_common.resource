@@ -19,3 +19,9 @@ Generate Current Timestamp
     ${timestamp}=      Get Current Date    result_format=${format}
     RETURN             ${timestamp}
 
+Generate Future Date One Month
+    [Documentation]    Calculates current date + 1 month and formats as dd/mm/yyyy
+    ${current_date}=       Get Current Date
+    ${future_date}=        Add Time To Date           ${current_date}    30 days
+    ${formatted_date}=     Convert Date               ${future_date}     result_format=%d/%m/%Y
+    RETURN                 ${formatted_date}
