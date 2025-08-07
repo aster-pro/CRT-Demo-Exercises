@@ -38,6 +38,20 @@ Go to opportunities
     [Documentation]             go to oportunities tab
     ClickText                   Opportunities
     Verify Text                 Opportunities
+Create New oportunity DD
+    [Documentation]             Create new opportunity from sales menu
+    ClickText                   New
+    UseModal                    On
+    ${future_date}              Get Current Date            increment=30 days           result_format=%m/%d/%Y
+    ${today_timestamp}          Get Current Date            result_format=%Y%m%d_%H%M%S
+    ${opportunity_name_timestamp}                           Set Variable                ${opportunity_name}_${today_timestamp}
+    TypeText                    *Close Date                 ${future_date}
+    TypeText                    *Opportunity Name           ${opportunity_name_timestamp}
+    PickList                    *Stage                      ${Stage}
+    ComboBox                    Search Accounts...          ${Account}                  index=${AccountIndex}
+    VerifyPickList              Lead Source                 ${LeadSource}
+    ClickText                   Save                        partial_match=False
+    UseModal                    Off
 
 Create New oportunity
     [Documentation]             Create new opportunity from sales menu
