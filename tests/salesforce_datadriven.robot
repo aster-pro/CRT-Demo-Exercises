@@ -13,7 +13,6 @@ ${BROWSER}                   chrome
 
 
 *** Test Cases ***
-
 Salesforce Create Opportunity
     [Tags]    Datadriven_opp
 
