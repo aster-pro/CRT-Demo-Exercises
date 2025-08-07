@@ -14,12 +14,12 @@ ${PASSWORD}            ${EMPTY}
 ${SF_URL}              https://ability-velocity-7734.scratch.my.salesforce.com/
 
 *** Test Cases ***
-Opportunity with     ${opportunity_name} ${account_name} ${stage}  ${type}    ${amount}    ${probability}    ${lead_source}    ${next_step}    ${description}
+Opportunity with     ${opportunity_name}     ${account_name} ${stage}  ${type}    ${amount}    ${probability}    ${lead_source}    ${next_step}    ${description}
 
 
 *** Keywords ***
 Opportunity
-[Arguments]    ${opportunity_name}    ${account_name}    ${stage}    ${type}    ${amount}    ${probability}    ${lead_source}    ${next_step}    ${description}
+[Arguments]    ${opportunity_name}        ${account_name}    ${stage}    ${type}    ${amount}    ${probability}    ${lead_source}    ${next_step}    ${description}
 
     [Documentation]    Open Browser
     Open Browser       about:blank                 ${BROWSER}
