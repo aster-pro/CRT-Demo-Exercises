@@ -19,8 +19,9 @@ Salesforce Service Page Validation Test
     # Login to Salesforce
     Login To Salesforce
 
-    # Navigate to Service app
+Navigate to Service app
     Launch App             Service
+    VerifyText             Service
 
     # Verify Service page loaded correctly
     Verify Text            Service                     timeout=20
