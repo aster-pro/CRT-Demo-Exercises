@@ -35,10 +35,6 @@ Create Opportunity From Excel Data
     Launch App               Sales
     Verify Text              Sales                       timeout=20
 
-    # Navigate to Sales app
-    Launch App               Sales
-    Verify Text              Sales                       timeout=20
-
     # Navigate to Opportunities tab
     Click Text               Opportunities
     Verify Text              Opportunities               timeout=15
