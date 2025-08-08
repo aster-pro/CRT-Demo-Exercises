@@ -14,7 +14,7 @@ Create Opportunity Template with ${opportunity_name}
 
 Create Opportunity Template
     [Documentation]          Test for DataDriver
-    [Arguments]              ${opportunity_name}         ${probability}              ${amount}    ${account_name}    ${stage}
+    [Arguments]              ${opportunity_name}    ${probability}              ${amount}    ${account_name}    ${stage}
 
     # Go to the log in page
     GoTo                     ${URL}
