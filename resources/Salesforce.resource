@@ -8,8 +8,8 @@ Login
     Run Keyword If        ${is_logged_in}             Perform Login
 Perform Login
     GoTo                  ${URL}
-    TypeText              Username                    ${username}
-    TypeSecret            Password                    ${password}
+    TypeText              Username                    ${USERNAME}
+    TypeSecret            Password                    ${PASSWORD}
     ClickText             Log In
 Close Browser
     [Documentation]       Closes the current browser session
