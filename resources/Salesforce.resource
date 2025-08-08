@@ -1,12 +1,16 @@
 *** Settings ***
-Library     QForce
+Library                   QForce
 
 *** Keywords ***
-Log In
-    [Documentation]    Log in 
-    Type Text          Username        ${USERNAME}
-    Type Secret        Password        ${PASSWORD}
-    Click Text         Log In
+Login
+    [Documentation]       Ensure user is logged into Salesforce
+    ${is_logged_in}=      Run Keyword And Return Status                VerifyText            Setup    timeout=3
+    Run Keyword Unless    ${is_logged_in}             Perform Login
+Perform Login
+    GoTo                  ${URL}
+    TypeText              Username                    ${username}
+    TypeSecret            Password                    ${password}
+    ClickText             Log In
 Close Browser
-    [Documentation]    Closes the current browser session
+    [Documentation]       Closes the current browser session
     Close All Browsers
