@@ -15,6 +15,7 @@ ${BROWSER}                   chrome
 
 *** Test Cases ***
 New DataDriven Opportunity with ${opportunity_name} ${account_name}
+    [Documentation]    Uses the test template to create a new opportunity for each rows data from excel file
     [Tags]    Datadriven_opp
 
 *** Keywords ***
