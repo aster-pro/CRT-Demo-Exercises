@@ -7,7 +7,7 @@ Library    String
 *** Keywords ***
 Login To Salesforce
     [Documentation]    Handles Salesforce login process
-    
+    GoTo               ${URL}
     Type Text          Username             ${USERNAME}
     Type Secret        Password             ${PASSWORD}
     Click Text         Log In
