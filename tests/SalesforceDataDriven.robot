@@ -1,6 +1,7 @@
 *** Settings ***
 Library                      QForce
 Library                      DateTime
+Library                      DataDriver                  reader_class=TestDataApi    name=CSBExcel.xlsx
 Resource                     ../resources/Salesforce.resource
 Suite Setup                  Open Browser                about:blank                 chrome
 Test Template                Create Opportunity Template
@@ -14,7 +15,7 @@ Create Opportunity Template with ${opportunity_name}
 
 Create Opportunity Template
     [Documentation]          Test for DataDriver
-    [Arguments]              ${opportunity_name}    ${probability}              ${amount}    ${account_name}    ${stage}
+    [Arguments]              ${opportunity_name}         ${probability}              ${amount}             ${account_name}    ${stage}
 
     # Go to the log in page
     GoTo                     ${URL}
