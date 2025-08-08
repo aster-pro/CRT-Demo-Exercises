@@ -4,7 +4,7 @@ Library                         QWeb
 Library                         DateTime
 Library                         DataDriver                  reader_class=TestDataApi    name=salesforce_test.xlsx
 Resource                        ../resources/salesforce_common.resource
-Suite Setup                     OpenBrowser                 about:blank                 chrome
+# Suite Setup                     OpenBrowser                 about:blank                 chrome
 Suite Teardown                  Close All Browsers
 Test Template                   New DataDriven Opportunity
 
