@@ -19,6 +19,10 @@ New DataDriven Opportunity with ${opportunity_name} ${account_name}
     [Tags]    Datadriven_opp
 
 *** Keywords ***
+Launch Salesforce
+    OpenBrowser    about:blank    chrome
+    GoTo           ${URL}
+
 Navigate to Sales app
     [Documentation]    Launches the Sales section in salesforce
     Launch App               Sales
@@ -42,8 +46,7 @@ New DataDriven Opportunity
     ${current_timestamp}=    Get Current Date
     ${close_date}=           Generate Future Date One Month
     
-    # Navigate to salesforce
-    GoTo                     ${URL}
+    Launch Salesforce
 
     # Login to Salesforce
     Login To Salesforce
