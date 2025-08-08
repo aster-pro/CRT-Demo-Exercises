@@ -3,7 +3,7 @@ Library                      QForce
 Library                      DateTime
 Resource                     ../resources/Salesforce.resource
 Suite Setup                  Open Browser                about:blank                 chrome
-Test Template                Example Test
+Test Template                Create Opportunity Template
 
 
 *** Test Cases ***
