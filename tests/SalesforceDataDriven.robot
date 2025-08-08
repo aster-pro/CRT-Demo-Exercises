@@ -17,11 +17,8 @@ Create Opportunity Template
     [Documentation]          Test for DataDriver
     [Arguments]              ${opportunity_name}         ${amount}                   ${account_name}       ${stage}
 
-    # Go to the log in page
-    GoTo                     ${URL}
-
-    # Perform login with credentials
-    Log In
+    #Performs the login
+    Login
 
     # Navigate to app launcher and click Sales
     LaunchApp                Sales
