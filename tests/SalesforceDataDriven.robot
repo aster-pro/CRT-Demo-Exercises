@@ -15,7 +15,7 @@ Create Opportunity Template with ${opportunity_name}
 
 Create Opportunity Template
     [Documentation]          Test for DataDriver
-    [Arguments]              ${opportunity_name}         ${probability}              ${amount}             ${account_name}    ${stage}
+    [Arguments]              ${opportunity_name}         ${amount}                   ${account_name}       ${stage}
 
     # Go to the log in page
     GoTo                     ${URL}
@@ -48,6 +48,5 @@ Create Opportunity Template
     PickList                 Lead Source                 Public Relations
     TypeText                 Next Step                   test
     TypeText                 Description                 opportunities test
-    TypeText                 Probability(%)              ${probability}
     ClickText                Save                        partial_match=False
     UseModal                 Off
