@@ -15,7 +15,7 @@ Example Test
 Create Opportunity Template
     [Documentation]          Test for DataDriver
     [Arguments]              ${opportunity_name}         ${probability}              ${amount}    ${account_name}    ${stage}
-       
+
     # Go to the log in page
     GoTo                     ${URL}
 
