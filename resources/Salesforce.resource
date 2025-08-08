@@ -5,7 +5,7 @@ Library                   QForce
 Login
     [Documentation]       Ensure user is logged into Salesforce
     ${is_logged_in}=      Run Keyword And Return Status                VerifyText            Setup    timeout=3
-    Run Keyword Unless    ${is_logged_in}             Perform Login
+    Run Keyword If        ${is_logged_in}             Perform Login
 Perform Login
     GoTo                  ${URL}
     TypeText              Username                    ${username}
