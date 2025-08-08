@@ -4,10 +4,10 @@ Library                   QForce
 *** Keywords ***
 Login
     [Documentation]       Ensure user is logged into Salesforce
+    GoTo                  ${URL}
     ${is_logged_in}=      Run Keyword And Return Status                VerifyText            Setup    timeout=3
     Run Keyword If        ${is_logged_in}             Perform Login
 Perform Login
-    GoTo                  ${URL}
     TypeText              Username                    ${USERNAME}
     TypeSecret            Password                    ${PASSWORD}
     ClickText             Log In
