@@ -5,6 +5,7 @@ Library                   QForce
 Login
     [Documentation]       Ensure user is logged into Salesforce
     GoTo                  ${URL}
+    Sleep                 1s
     ${is_logged_in}=      Run Keyword And Return Status                VerifyText             Log In    timeout=3
     Run Keyword If        ${is_logged_in}             Perform Login
 Perform Login
