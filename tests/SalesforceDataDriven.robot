@@ -1,7 +1,7 @@
 *** Settings ***
 Library                      QForce
 Library                      DateTime
-Library                      DataDriver                  name=CSBExcel.xlsx
+Library                      DataDriver                  file=CSBExcel.xlsx
 Resource                     ../resources/Salesforce.resource
 Suite Setup                  Open Browser                about:blank                 chrome
 Test Template                Create Opportunity Template
